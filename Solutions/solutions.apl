@@ -8,4 +8,13 @@ PE1 ← +/⍸0=((3|⍳)∧(5|⍳))
 ⍝ Kind of gross, (+.!∘⌽⍨⍳) does a fibonacci number and I just checked
 ⍝ to find where it goes over 4 million at 34.
 ⍝ Every third fibonacci number is even
-PE2 ← +/(∊(0=3∘|)⊆((+.!∘⌽⍨⍳)¨))⍳ 34
+PE2 ← +/((∊(0=3∘|)⊆((+.!∘⌽⍨⍳)¨))⍳) 34
+
+
+⍝ PE3: Import dfns factors and grab the last one
+)copy dfns factors
+PE3 ← ¯1↑factors
+PE3 600851475143
+
+
+
