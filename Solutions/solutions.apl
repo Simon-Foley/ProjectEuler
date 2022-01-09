@@ -16,5 +16,12 @@ PE2 ← +/((∊(0=3∘|)⊆((+.!∘⌽⍨⍳)¨))⍳) 34
 PE3 ← ¯1↑factors
 PE3 600851475143
 
+⍝ PE4: Largest palindrome number as multiple of two 3 digit numbers
+↑↑¯1↑((⌽≡⊢)¨⊆⊢)⍕¨(⊂∘⍋⌷⊢)∪∊(∘.×⍨) 100 + ⍳899
+
+
+⍝ PE6: (Sum to N)^2 - (Sum from 0 to N of N^2)
+⍝ Nice tacit solution
+PE6 ← ((2*⍨(+/⍳)) - (+/2*⍨⍳))
 
 
