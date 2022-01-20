@@ -1,4 +1,4 @@
-⍝ File for random Project Euler solutions in APL
+⍝ File for neat Project Euler solutions in APL
 
 ⍝ PE1: Sum of all multiples of 3 and 5 below N:
 ⍝ ⎕io←0
@@ -24,8 +24,12 @@ PE5 ← ^/⍳
 ⍝ Nice tacit solution
 PE6 ← ((2*⍨(+/⍳)) - (+/2*⍨⍳))
 
-⍝ PE7: Nothing interesting
 
 ⍝ PE8: find greatest len 13 multiplication-reduced substring in 1000 digits
 ⍝ Hardest part is getting the numbers loaded in
 PE8 ← ⌈/13×/⍎¨
+
+⍝ PE12: Find smallest triangular number with over 500 factors. Cheating a bit by using the inbuilt factors 
+⍝ Uses unique combinations of prime factors to get total factors
+)copy dfns factors
+PE12 ← {(×/1++/~0=⊢⌸factors+/⍳⍵)>500: +/⍳⍵ ⋄ ∇ ⍵+1} 1
