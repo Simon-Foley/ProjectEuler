@@ -33,3 +33,9 @@ PE8 ← ⌈/13×/⍎¨
 ⍝ Uses unique combinations of prime factors to get total factors
 )copy dfns factors
 PE12 ← {(×/1++/~0=⊢⌸factors+/⍳⍵)>500: +/⍳⍵ ⋄ ∇ ⍵+1} 1
+
+
+⍝ PE29: Number of unique a^b for 2 <= a, b <= 100
+
+PE29 ← ≢∪∊((⍳99)+1) ∘.* ((⍳99)+1)
+
